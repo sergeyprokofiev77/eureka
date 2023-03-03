@@ -15,7 +15,7 @@ spring:
         enabled: true
       server:
         native:
-          search-locations: C:/Users/Пользователь/IdeaProjects/eureka/ms-config-properties/{application}/{profile}
+          search-locations: C:\Users\Пользователь\IdeaProjects\eureka\ms-config-properties\{application}\{profile}
 
 eureka:
   client:
