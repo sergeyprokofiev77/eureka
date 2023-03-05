@@ -1,23 +1,34 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+server:
+  port: 8888
 spring:
-  profiles:
-    active: native
   application:
     name: config-server
-server:
-  port: 8886
 ---
+#spring:
+#  profiles:
+#    active: git
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#      server:
+#        git:
+#          uri: https://github.com/sergeyprokofiev77/ms-config-properties
+#          search-paths:
+#            - "ms-config-properties/{application}/{profile}"
+#          default-label: main
+
 spring:
   profiles:
     active: native
   cloud:
     config:
-      discovery:
-        enabled: true
       server:
         native:
-          search-locations: C:\Users\Пользователь\IdeaProjects\eureka\ms-config-properties\{application}\{profile}
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+          search-locations: C:/Users/Пользователь/IdeaProjects/eureka/ms-config-properties/ms-config-properties/{application}/{profile}/
+        bootstrap: true

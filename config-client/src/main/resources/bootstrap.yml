@@ -5,11 +5,16 @@ eureka:
   instance:
     prefer-ip-address: true
 
+server:
+  port: 8082
+
 spring:
   application:
     name: config-client
+  config:
+    name: config-client
   cloud:
     config:
+      enabled: true
       discovery:
         enabled: true
-        service-id: config-server
